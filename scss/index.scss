@@ -1,0 +1,177 @@
+#game-info{
+  display: flex;
+  height: 40px;
+  justify-content: space-between;
+  align-items: center;
+  background-color: gray;
+}
+
+.bomb-indicate {
+  display: flex;
+}
+
+.stopwatch{
+  display: flex;
+}
+
+#board {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.tile {
+  width: 17px;
+  height: 17px;
+  background-image: url('../img/sprite.png');
+  background-position: 0 -50px;
+  cursor: pointer;
+
+  &:hover{
+    opacity: 0.6;
+  }
+    
+  &--flagged{
+    background-position: -33px -50px;
+  }
+  
+  &--focus,
+  &--checked{
+    background-position: -17px -50px;
+  }
+
+
+  // TODO: Переписать
+  &--one:hover,
+  &--two:hover,
+  &--three:hover,
+  &--four:hover,
+  &--five:hover,
+  &--six:hover,
+  &--seven:hover,
+  &--eight:hover{
+      opacity: 1;
+  }
+
+  &--one{
+    background-position: 0 -67px;
+  }
+
+  &--two{
+    background-position: -17px -67px;
+  }
+
+  &--three {
+    background-position: -34px -67px;
+  }
+
+  &--four {
+    background-position: -51px -67px;
+  }
+  
+  &--five {
+    background-position: -68px -67px;
+  }
+
+  &--six {
+    background-position: -85px -67px;
+  }
+
+  &--seven {
+    background-position: -102px -67px;
+  }
+
+  &--eight {
+    background-position: -119px -67px;
+  }
+}
+
+.tile-bomb{
+  background-position: -85px -50px;
+
+  &--focus{
+    background-position: -102px -50px;
+  }
+
+  &--disable{
+    background-position: -119px -50px;
+  }
+}
+
+.tile-question {
+   background-position: -51px -50px;
+
+  &--focus{
+    background-position: -68px -50px;
+  }
+}
+
+.start-button {
+  width: 26px;
+  height: 26px;
+  background-image: url("../img/sprite.png");
+  background-position: 0 -24px;
+  cursor: pointer;
+
+  &:active {
+    background-position: -27px -24px;
+  }
+
+  &--tile-focus {
+    background-position: -54px -24px;
+  }
+
+  &--win {
+    background-position: -81px -24px;
+  }
+
+  &--lose {
+    background-position: -107px -24px;
+  }
+}
+
+.numeric{
+  width: 14px;
+  height: 24px;
+  background-image: url("../img/sprite.png");
+  background-position: 0 0;
+
+  &--zero {
+    background-position: -125px 0;
+  }
+
+  &--one{
+    background-position: 0 0;
+  }
+
+  &--two{
+    background-position: -14px -0;
+  }
+
+  &--three {
+    background-position: -27px 0;
+  }
+
+  &--four {
+    background-position: -41px 0;
+  }
+  
+  &--five {
+    background-position: -55px 0;
+  }
+
+  &--six {
+    background-position: -69px 0;
+  }
+
+  &--seven {
+    background-position: -83px 0;
+  }
+
+  &--eight {
+    background-position: -97px 0;
+  }
+
+  &--nine {
+    background-position: -111px 0;
+  }
+}
